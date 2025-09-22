@@ -1,7 +1,7 @@
 #ifndef GAME_DIFFICULTY_H
 #define GAME_DIFFICULTY_H
 
-#include <stdint.h> // uint_8t
+#include <stdio.h> // uint_8t
 
 typedef enum {
     EASY_LEVEL    = 1,

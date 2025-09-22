@@ -1,4 +1,5 @@
 #include "level.h"
+#include <stdint.h>
 
 char getCh(level* lvl, size_t x, size_t y) { return lvl->map[y][x]; }
 
@@ -42,7 +43,7 @@ void genMap(level* lvl, levelDifficulty difficulty) {
             char* chosenChar = &lvl->map[i][j];
             for (size_t y = (i > 0 ? i - 1 : i); y <= (i < H - 1 ? i + 1 : i); y++) {
                 for (size_t x = (j > 0 ? j - 1 : j); x <= (j < W - 1 ? j + 1 : j); x++) {
-                    if (isMine(lvl, x, y))
+                    if (isMineAt(lvl, x, y))
                         counter++;
                 }
             }

@@ -4,6 +4,8 @@
 /*-------------
  -- NUMBER  -- 
 -------------*/
+#define MAX_ITEMS 3
+#define MAX_STRINGLEN 20
 // -+- MINES -+-
 #define EASY_MINES    7
 #define MEDIUM_MINES  12

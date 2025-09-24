@@ -68,7 +68,7 @@ void printMap(level* lvl, bool closedOrNot) {
         printf("\n");
 }
 
-void revealCell(level* lvl, size_t y, size_t x) { *(&lvl->closedmap[y][x]) = lvl->map[y][x]; }
+void revealCell(level* lvl, const size_t y, const size_t x) { *(&lvl->closedmap[y][x]) = lvl->map[y][x]; }
 
 bool checkWin(level* lvl) { return lvl->closedmap == lvl->map; }
 bool checkLose(level* lvl) {

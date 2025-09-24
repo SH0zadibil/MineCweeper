@@ -21,7 +21,6 @@ bool checkLose(level* lvl);
 void genMap(level* lvl, levelDifficulty difficulty);
 void regenMap(level* lvl, levelDifficulty difficulty);
 void printMap(level* lvl, bool closedOrNot);
-void revealcell(level* lvl, size_t x, size_t y);
-
+void revealCell(level* lvl, const size_t x, const size_t y);
 
 #endif

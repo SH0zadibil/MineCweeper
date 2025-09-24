@@ -3,6 +3,17 @@
 #include "src/include/declaration_file.h"
 #include <stdio.h>
 
+int8_t choice = 0;
+level lvl;
+const char options[MAX_ITEMS][MAX_STRINGLEN] = {
+    "EASY",
+    "MEDIUM",
+    "EXTREME"
+};
+
+void display_menu();
+void config_game();
+
 // <?> WINDOWS/LINUX KEY INPUT
 // the "_getch" method
 #ifdef _WIN32
@@ -25,6 +36,14 @@
     }
 #endif
 
+
+int8_t choice = 0;
+level lvl;
+const char options[MAX_ITEMS][MAX_STRINGLEN] = {
+    "Start Game",
+    "Options",
+    "Exit"
+};
 
 #define Q_KEY_PRESSED 'q'
 #define W_KEY_PRESSED 'w'

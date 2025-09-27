@@ -1,4 +1,16 @@
+#include <stdint.h>
+#include <stdlib.h>
 #include "game.h"
+
+// Ensure 'level' is defined before this line, either in game.h or above.
+int8_t choice = 0;
+level lvl;
+const char options[MAX_ITEMS][MAX_STRINGLEN] =
+{
+    "EASY",
+    "MEDIUM",
+    "EXTREME"
+};
 
 void display_menu() {
     #ifdef _WIN32

@@ -1,15 +1,12 @@
 #pragma once
 
 #include "src/include/declaration_file.h"
+#include <stdint.h>
 #include <stdio.h>
 
-int8_t choice = 0;
-level lvl;
-const char options[MAX_ITEMS][MAX_STRINGLEN] = {
-    "EASY",
-    "MEDIUM",
-    "EXTREME"
-};
+extern int8_t choice;
+extern level lvl;
+extern const char options[MAX_ITEMS][MAX_STRINGLEN];
 
 void display_menu();
 void config_game();
@@ -18,10 +15,12 @@ void config_game();
 // the "_getch" method
 #ifdef _WIN32
     #include <conio.h> // _getch()
+    #define ENTER 13
     char userinputkey;
 #elif __linux__
     #include <unistd.h>
     #include <termios.h>
+    #define ENTER 10
     int userinputkey;
     int _getch(void) {
         struct termios oldt, newt;
@@ -36,17 +35,8 @@ void config_game();
     }
 #endif
 
-
-int8_t choice = 0;
-level lvl;
-const char options[MAX_ITEMS][MAX_STRINGLEN] = {
-    "Start Game",
-    "Options",
-    "Exit"
-};
-
-#define Q_KEY_PRESSED 'q'
-#define W_KEY_PRESSED 'w'
-#define A_KEY_PRESSED 'a'
-#define S_KEY_PRESSED 's'
-#define D_KEY_PRESSED 'd'
+#define Q 'q'
+#define W 'w'
+#define A 'a'
+#define S 's'
+#define D 'd'

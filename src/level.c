@@ -1,10 +1,10 @@
-#include "level.h"
+#include "include/game/level.h"
 #include <stdint.h>
 
 char getCh(level* lvl, size_t x, size_t y) { return lvl->map[y][x]; }
 
 bool isMine(level* lvl, char* ch) { return *ch == MINE_CH; }
-bool isMineAt(level* lvl, size_t x, size_t y) { return *(&lvl->map[y][x]) = MINE_CH; }
+bool isMineAt(level* lvl, size_t x, size_t y) { return lvl->map[y][x] == MINE_CH; }
 bool checkWin(level* lvl) { return lvl->closedmap == lvl->map; }
 
 void genMap(level* lvl, levelDifficulty difficulty) {
@@ -70,7 +70,7 @@ void printMap(level* lvl, bool closedOrNot) {
 
 void revealCell(level* lvl, const size_t y, const size_t x) { *(&lvl->closedmap[y][x]) = lvl->map[y][x]; }
 
-bool checkWin(level* lvl) { return lvl->closedmap == lvl->map; }
+bool checkWin(level* lvl) { return *(&lvl->closedmap) == lvl->map; }
 bool checkLose(level* lvl) {
     for (size_t i = 0; i < lvl->closedmap[i][0]; i++) {  
         for (size_t j = 0; j < lvl->closedmap[i][j]; j++) {

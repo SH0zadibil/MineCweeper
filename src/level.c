@@ -1,5 +1,4 @@
 #include "include/game/level.h"
-#include <stdint.h>
 
 char getCh(level* lvl, size_t x, size_t y) { return lvl->map[y][x]; }
 
@@ -39,7 +38,7 @@ void genMap(level* lvl, levelDifficulty difficulty) {
     // - Generate numbers on the map
     for (size_t i = 0; i < lvl->map[i][0]; i++) {
         for (size_t j = 0; j < lvl->map[i][j]; j++) {
-            uint8_t counter = 0;
+            int counter = 0;
             char* chosenChar = &lvl->map[i][j];
             for (size_t y = (i > 0 ? i - 1 : i); y <= (i < H - 1 ? i + 1 : i); y++) {
                 for (size_t x = (j > 0 ? j - 1 : j); x <= (j < W - 1 ? j + 1 : j); x++) {
@@ -68,9 +67,10 @@ void printMap(level* lvl, bool closedOrNot) {
         printf("\n");
 }
 
-void revealCell(level* lvl, const size_t y, const size_t x) { *(&lvl->closedmap[y][x]) = lvl->map[y][x]; }
+void revealCell(level* lvl, const size_t y, const size_t x) { 
+    *(&lvl->closedmap[y][x]) = lvl->map[y][x];
+}
 
-bool checkWin(level* lvl) { return *(&lvl->closedmap) == lvl->map; }
 bool checkLose(level* lvl) {
     for (size_t i = 0; i < lvl->closedmap[i][0]; i++) {  
         for (size_t j = 0; j < lvl->closedmap[i][j]; j++) {

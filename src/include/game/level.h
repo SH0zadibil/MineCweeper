@@ -1,9 +1,12 @@
 #ifndef LEVEL_H
 #define LEVEL_H
 
+#include <stdbool.h>
+#include <time.h>
+#include <stdlib.h>
+
 #include "difficulty.h"
 #include "constants.h"
-#include <stdbool.h>
 
 typedef struct {
     bool initialized;

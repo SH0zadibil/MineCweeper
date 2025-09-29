@@ -1,0 +1,2 @@
+/home/maksimlinuxoid/Рабочий стол/MineCweeper/build/CMakeFiles/edit_cache.dir
+/home/maksimlinuxoid/Рабочий стол/MineCweeper/build/CMakeFiles/rebuild_cache.dir

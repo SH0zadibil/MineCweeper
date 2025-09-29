@@ -2,6 +2,25 @@
 #include <stdlib.h>
 #include "game.h"
 
+#ifdef _WIN32
+    #include <conio.h> // _getch()
+#endif
+#ifdef __linux__
+    #include <unistd.h>
+    #include <termios.h>
+    int getch(void) {
+        struct termios oldt, newt;
+        int ch;
+        tcgetattr(STDIN_FILENO, &oldt);
+        newt = oldt;
+        newt.c_lflag &= ~(ICANON | ECHO);
+        tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+        ch = getchar();
+        tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+        return ch;
+    }
+#endif
+
 // Ensure 'level' is defined before this line, either in game.h or above.
 int8_t choice = 0;
 level lvl;
@@ -28,5 +47,9 @@ void display_menu() {
 }
 
 void config_game() {
-    regenMap(&lvl, getDifficultyFromInput(userinputkey));
+    regenMap(&lvl, getDifficultyFromInput(choice));
+}
+
+int listenKey() {
+    return _getch();
 }

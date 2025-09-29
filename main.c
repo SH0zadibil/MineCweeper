@@ -5,7 +5,7 @@ int main() {
     while (1 || choice != Q)
     {
         display_menu();
-        userinputkey = _getch();
+        int userinputkey = _getch();
 
         switch (userinputkey)
         {
@@ -22,6 +22,5 @@ int main() {
                 return 0;
         }
     }
-    
     return 0;
 }

@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = "/home/maksimlinuxoid/Рабочий стол/MineCweeper/bui
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/MineCweeper.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,8 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean:
+clean: CMakeFiles/MineCweeper.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/MineCweeper.dir
+
+# All Build rule for target.
+CMakeFiles/MineCweeper.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MineCweeper.dir/build.make CMakeFiles/MineCweeper.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MineCweeper.dir/build.make CMakeFiles/MineCweeper.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/maksimlinuxoid/Рабочий стол/MineCweeper/build/CMakeFiles" --progress-num=1,2,3,4 "Built target MineCweeper"
+.PHONY : CMakeFiles/MineCweeper.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/MineCweeper.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/maksimlinuxoid/Рабочий стол/MineCweeper/build/CMakeFiles" 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MineCweeper.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/maksimlinuxoid/Рабочий стол/MineCweeper/build/CMakeFiles" 0
+.PHONY : CMakeFiles/MineCweeper.dir/rule
+
+# Convenience name for target.
+MineCweeper: CMakeFiles/MineCweeper.dir/rule
+.PHONY : MineCweeper
+
+# clean rule for target.
+CMakeFiles/MineCweeper.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MineCweeper.dir/build.make CMakeFiles/MineCweeper.dir/clean
+.PHONY : CMakeFiles/MineCweeper.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

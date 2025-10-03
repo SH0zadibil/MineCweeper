@@ -18,6 +18,7 @@ int listenKey()    ;
 #endif
 #ifdef __linux__
     #define ENTER 10
+    int _getch(void);
 #endif
 
 #define Q 'q' // 0x27

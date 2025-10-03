@@ -1,0 +1,1 @@
+/usr/bin/gcc -g CMakeFiles/MineCweeper.dir/main.c.o CMakeFiles/MineCweeper.dir/src/difficulty.c.o CMakeFiles/MineCweeper.dir/src/level.c.o -o MineCweeper 

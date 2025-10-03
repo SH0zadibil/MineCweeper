@@ -8,7 +8,7 @@
 #ifdef __linux__
     #include <unistd.h>
     #include <termios.h>
-    int getch(void) {
+    int _getch(void) {
         struct termios oldt, newt;
         int ch;
         tcgetattr(STDIN_FILENO, &oldt);
@@ -48,8 +48,4 @@ void display_menu() {
 
 void config_game() {
     regenMap(&lvl, getDifficultyFromInput(choice));
-}
-
-int listenKey() {
-    return _getch();
 }

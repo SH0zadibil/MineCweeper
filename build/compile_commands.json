@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/maksimlinuxoid/Рабочий стол/MineCweeper/build",
+  "command": "/usr/bin/gcc  -I\"/home/maksimlinuxoid/Рабочий стол/MineCweeper/include\" -I\"/home/maksimlinuxoid/Рабочий стол/MineCweeper/include/game\" -g -o CMakeFiles/MineCweeper.dir/main.c.o -c \"/home/maksimlinuxoid/Рабочий стол/MineCweeper/main.c\"",
+  "file": "/home/maksimlinuxoid/Рабочий стол/MineCweeper/main.c",
+  "output": "CMakeFiles/MineCweeper.dir/main.c.o"
+},
+{
+  "directory": "/home/maksimlinuxoid/Рабочий стол/MineCweeper/build",
+  "command": "/usr/bin/gcc  -I\"/home/maksimlinuxoid/Рабочий стол/MineCweeper/include\" -I\"/home/maksimlinuxoid/Рабочий стол/MineCweeper/include/game\" -g -o CMakeFiles/MineCweeper.dir/src/difficulty.c.o -c \"/home/maksimlinuxoid/Рабочий стол/MineCweeper/src/difficulty.c\"",
+  "file": "/home/maksimlinuxoid/Рабочий стол/MineCweeper/src/difficulty.c",
+  "output": "CMakeFiles/MineCweeper.dir/src/difficulty.c.o"
+},
+{
+  "directory": "/home/maksimlinuxoid/Рабочий стол/MineCweeper/build",
+  "command": "/usr/bin/gcc  -I\"/home/maksimlinuxoid/Рабочий стол/MineCweeper/include\" -I\"/home/maksimlinuxoid/Рабочий стол/MineCweeper/include/game\" -g -o CMakeFiles/MineCweeper.dir/src/level.c.o -c \"/home/maksimlinuxoid/Рабочий стол/MineCweeper/src/level.c\"",
+  "file": "/home/maksimlinuxoid/Рабочий стол/MineCweeper/src/level.c",
+  "output": "CMakeFiles/MineCweeper.dir/src/level.c.o"
+}
+]

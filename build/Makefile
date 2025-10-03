@@ -116,6 +116,91 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named MineCweeper
+
+# Build rule for target.
+MineCweeper: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MineCweeper
+.PHONY : MineCweeper
+
+# fast build rule for target.
+MineCweeper/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MineCweeper.dir/build.make CMakeFiles/MineCweeper.dir/build
+.PHONY : MineCweeper/fast
+
+main.o: main.c.o
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MineCweeper.dir/build.make CMakeFiles/MineCweeper.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MineCweeper.dir/build.make CMakeFiles/MineCweeper.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MineCweeper.dir/build.make CMakeFiles/MineCweeper.dir/main.c.s
+.PHONY : main.c.s
+
+src/difficulty.o: src/difficulty.c.o
+.PHONY : src/difficulty.o
+
+# target to build an object file
+src/difficulty.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MineCweeper.dir/build.make CMakeFiles/MineCweeper.dir/src/difficulty.c.o
+.PHONY : src/difficulty.c.o
+
+src/difficulty.i: src/difficulty.c.i
+.PHONY : src/difficulty.i
+
+# target to preprocess a source file
+src/difficulty.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MineCweeper.dir/build.make CMakeFiles/MineCweeper.dir/src/difficulty.c.i
+.PHONY : src/difficulty.c.i
+
+src/difficulty.s: src/difficulty.c.s
+.PHONY : src/difficulty.s
+
+# target to generate assembly for a file
+src/difficulty.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MineCweeper.dir/build.make CMakeFiles/MineCweeper.dir/src/difficulty.c.s
+.PHONY : src/difficulty.c.s
+
+src/level.o: src/level.c.o
+.PHONY : src/level.o
+
+# target to build an object file
+src/level.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MineCweeper.dir/build.make CMakeFiles/MineCweeper.dir/src/level.c.o
+.PHONY : src/level.c.o
+
+src/level.i: src/level.c.i
+.PHONY : src/level.i
+
+# target to preprocess a source file
+src/level.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MineCweeper.dir/build.make CMakeFiles/MineCweeper.dir/src/level.c.i
+.PHONY : src/level.c.i
+
+src/level.s: src/level.c.s
+.PHONY : src/level.s
+
+# target to generate assembly for a file
+src/level.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MineCweeper.dir/build.make CMakeFiles/MineCweeper.dir/src/level.c.s
+.PHONY : src/level.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... MineCweeper"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... src/difficulty.o"
+	@echo "... src/difficulty.i"
+	@echo "... src/difficulty.s"
+	@echo "... src/level.o"
+	@echo "... src/level.i"
+	@echo "... src/level.s"
 .PHONY : help
 
 
